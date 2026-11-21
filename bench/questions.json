@@ -1,0 +1,7 @@
+{
+  "about": "Questions of the kind agents ask about Claude Code. Expectations are what the docs said on 2026-11-18 (Claude Code 2.1.327).",
+  "questions": [
+    { "id": "pretooluse-block", "q": "Which hook event fires before a tool call in Claude Code, and can it block the call?", "expect": ["PreToolUse", "hooks\\.md", "deny|block"] },
+    { "id": "code-mode-hooks", "q": "In a Code Mode session, which features are unavailable, and can a PreToolUse hook see the code Claude runs?", "expect": ["code-mode\\.md", "Remote Control", "REPL", "tool_input\\.code"] }
+  ]
+}

@@ -1,0 +1,23 @@
+id = "temet.claude-code-docs"
+name = "claude-code-docs"
+version = "0.1.0"
+min_ask_kit = "0.2.0"
+says = "how Claude Code itself works, from its official documentation and changelog: hooks, mods, plugins, skills, subagents, settings, permissions, MCP, headless and the Agent SDK, Code Mode, models and effort, and what changed in a release"
+keywords = ["claude code", "hooks?", "PreToolUse", "PostToolUse", "subagents?", "slash commands?", "settings\\.json", "CLAUDE\\.md", "plugins?", "mods?"]
+route_hint = "how Claude Code behaves or is configured in general is claude-code-docs; how this machine or repository has it configured is dotfiles or code"
+cite = "`docs/<page>.md:<line>` with the page's heading, plus its https://code.claude.com/docs/en/<page> address"
+instructions = "instructions.md"
+
+[[settings]]
+key = "DOCS_DIR"
+about = "the folder holding a copy of the Claude Code docs; refresh.sh fills the kit's own copy/ at install"
+default = "${KIT_DIR}/copy"
+
+[[sources]]
+kind = "folder"
+name = "docs"
+path = "${DOCS_DIR}"
+about = "docs/<page>.md one per page, llms.txt the index, CHANGELOG.md newest first, FETCHED.txt when it was copied"
+
+[[build]]
+command = ["bash", "refresh.sh"]

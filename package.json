@@ -1,0 +1,6 @@
+{
+  "name": "ask-kit-claude-code-docs",
+  "private": true,
+  "description": "Claude Code's documentation as an ask-kit kit; the package file lets a host such as mike depend on it with npm",
+  "license": "MIT"
+}
