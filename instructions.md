@@ -7,8 +7,8 @@ What the copy holds:
 - `docs/<page>.md`: one Markdown file per page, at the same path as on the site
   (`docs/hooks.md` is https://code.claude.com/docs/en/hooks). Several pages are thousands of lines.
 - `llms.txt`: the index, one line per page with its title and a one-sentence summary.
-- `CHANGELOG.md`: release notes, newest first, one `## <version>` heading per release; the weekly
-  digests are in `docs/whats-new/`.
+- `CHANGELOG.md`: release notes, newest first, one `## <version>` heading per release. Use
+  `llms.txt` to find weekly digests when the copied index lists them.
 - `FETCHED.txt`: when the copy was taken. Behaviour newer than that is not in it; say so.
 
 Where the common topics are: hooks `docs/hooks.md` (reference) and `docs/hooks-guide.md`; mods
@@ -24,7 +24,7 @@ How to work:
 - Read only the section you need: `scripts.run("outline", { path: "docs/hooks.md" })` lists a
   page's headings with lines; then `docs.read(file, { from, to })` from the heading you want.
 - Read the lines that decide the answer before you state it. Quote the deciding line briefly.
-- For when something arrived or changed, search `CHANGELOG.md` and `docs/whats-new/`.
+- For when something arrived or changed, search `CHANGELOG.md`, then paths listed in `llms.txt`.
 - When a cell fails, read the error and change the cell. Never send the same cell twice.
 - If the docs do not say, answer that they do not, and what you searched. Never answer from
   memory: Claude Code changes weekly.
