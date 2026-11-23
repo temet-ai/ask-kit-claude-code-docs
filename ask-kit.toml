@@ -1,6 +1,6 @@
 id = "temet.claude-code-docs"
 name = "claude-code-docs"
-version = "0.1.0"
+version = "0.1.1"
 min_ask_kit = "0.2.0"
 says = "how Claude Code itself works, from its official documentation and changelog: hooks, mods, plugins, skills, subagents, settings, permissions, MCP, headless and the Agent SDK, Code Mode, models and effort, and what changed in a release"
 keywords = ["claude code", "hooks?", "PreToolUse", "PostToolUse", "subagents?", "slash commands?", "settings\\.json", "CLAUDE\\.md", "plugins?", "mods?"]
